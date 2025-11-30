@@ -7,7 +7,7 @@ export interface IBooking extends Document {
   carModel: string;
   date: string;
   time: string;
-  status: "Pending" | "Accepted" | "Rejected" | "Cancelled";
+  status: "Pending" | "Completed" | "Cancelled";
 }
 
 const bookingSchema = new Schema<IBooking>(
@@ -20,7 +20,7 @@ const bookingSchema = new Schema<IBooking>(
     time: { type: String, required: true },
     status: {
       type: String,
-      enum: ["Pending", "Accepted", "Rejected", "Cancelled"],
+      enum: ["Pending", "Completed", "Cancelled"],
       default: "Pending",
     },
   },

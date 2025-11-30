@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import AuthRoute from "./routes/authRoute";
 import seviceRoute from "./routes/servicesRoute";
+import bookingRouter from "./routes/bookingRoute";
 
 
 dotenv.config();
@@ -17,3 +18,5 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", AuthRoute);
 app.use("/api/service", seviceRoute);
+
+app.use("/api/booking", bookingRouter);

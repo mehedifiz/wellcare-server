@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import servicesModel from "../models/servicesModel";
 
-// ================== CREATE SERVICE ==================
 export const createService = async (req: Request, res: Response) => {
   try {
     const { title, price, duration, description } = req.body;
@@ -20,7 +19,6 @@ export const createService = async (req: Request, res: Response) => {
   }
 };
 
-// ================== GET ALL SERVICES ==================
 export const getAllServices = async (req: Request, res: Response) => {
   try {
     const services = await servicesModel.find().sort({ createdAt: -1 });
@@ -31,7 +29,6 @@ export const getAllServices = async (req: Request, res: Response) => {
   }
 };
 
-// ================== GET SINGLE SERVICE ==================
 export const getServiceById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;

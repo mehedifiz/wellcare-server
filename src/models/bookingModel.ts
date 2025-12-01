@@ -23,6 +23,7 @@ const bookingSchema = new Schema<IBooking>(
       enum: ["Pending", "Completed", "Cancelled"],
       default: "Pending",
     },
+    
   },
   { timestamps: true }
 );

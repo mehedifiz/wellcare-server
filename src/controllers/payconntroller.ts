@@ -142,7 +142,7 @@ export const paymentSuccess = async (req: Request, res: Response) => {
       );
     }
  
-    return res.redirect(`${process.env.CLIENT}/dashboard/bookings`);
+    return res.redirect(`${process.env.CLIENT}/dashboard`);
   } catch (error) {
     console.error("Payment success handler error:", error);
     return res.redirect(

@@ -5,6 +5,7 @@ import AuthRoute from "./routes/authRoute";
 import seviceRoute from "./routes/servicesRoute";
 import bookingRouter from "./routes/bookingRoute";
 import payRouter from "./routes/paymentRoute";
+import userRoute from "./routes/userrRoute";
 
 
 dotenv.config();
@@ -23,3 +24,4 @@ app.use("/api/service", seviceRoute);
 app.use("/api/booking", bookingRouter);
 
 app.use("/api/pay", payRouter);
+app.use("/api/user", userRoute);

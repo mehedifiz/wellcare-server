@@ -6,6 +6,7 @@ import seviceRoute from "./routes/servicesRoute";
 import bookingRouter from "./routes/bookingRoute";
 import payRouter from "./routes/paymentRoute";
 import userRoute from "./routes/userrRoute";
+import statRoute from "./routes/statRoute";
 
 
 dotenv.config();
@@ -25,3 +26,6 @@ app.use("/api/booking", bookingRouter);
 
 app.use("/api/pay", payRouter);
 app.use("/api/user", userRoute);
+
+
+app.use("/api/stat", statRoute);

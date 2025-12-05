@@ -31,3 +31,12 @@ app.use("/api/user", userRoute);
 
 app.use("/api/stat", statRoute);
 app.use("/api/message", Messrouter);
+
+
+ 
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route Not Found",
+  });
+});

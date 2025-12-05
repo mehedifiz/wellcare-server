@@ -1,4 +1,4 @@
-import express, { request, response } from "express";
+import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import AuthRoute from "./routes/authRoute";
@@ -32,14 +32,7 @@ app.use("/api/user", userRoute);
 app.use("/api/stat", statRoute);
 app.use("/api/message", Messrouter);
 
-app.use("/" ,(req ,res  ) =>{
-    res.send("root hited ")
 
-} )
- 
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    message: "Route Not Found",
-  });
-});
+app.use("/" , (req , res )=>{
+    res.send("root")
+})

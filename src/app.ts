@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request, response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import AuthRoute from "./routes/authRoute";
@@ -32,7 +32,10 @@ app.use("/api/user", userRoute);
 app.use("/api/stat", statRoute);
 app.use("/api/message", Messrouter);
 
+app.use("/" ,(req ,res  ) =>{
+    res.send("root hited ")
 
+} )
  
 app.use((req, res) => {
   res.status(404).json({

@@ -7,6 +7,7 @@ import bookingRouter from "./routes/bookingRoute";
 import payRouter from "./routes/paymentRoute";
 import userRoute from "./routes/userrRoute";
 import statRoute from "./routes/statRoute";
+import Messrouter from "./routes/contractRoute";
 
 
 dotenv.config();
@@ -29,3 +30,4 @@ app.use("/api/user", userRoute);
 
 
 app.use("/api/stat", statRoute);
+app.use("/api/message", Messrouter);

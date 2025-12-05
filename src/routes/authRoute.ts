@@ -1,5 +1,5 @@
 import express from "express";
-import { login, register, verifyMail } from "../controllers/autcontroller";
+import { login,  register, verifyMail } from "../controllers/autcontroller";
 
 const AuthRoute = express.Router();
 
